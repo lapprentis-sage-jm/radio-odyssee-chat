@@ -1,35 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Odyssée</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+    }
 
-<!-- CONTAINER GLOBAL -->
-<div style="width: 100%; font-family: Arial, sans-serif; background-color: #121212; color: white;">
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background: #121212;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-  <!-- HEADER avec lecteur + logo + message -->
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 30px; background-color: #121212;">
+    .message {
+      font-size: 14px;
+      color: #dddddd;
+    }
 
-    <!-- Message gauche -->
-    <div style="font-size: 14px; color: #dddddd;">
-      🎉 Bienvenue sur l’espace Radio Odyssée
-    </div>
+    .player {
+      text-align: center;
+    }
 
-    <!-- Lecteur centré -->
-    <div style="text-align: center;">
-      <div style="font-size: 14px; font-weight: bold; margin-bottom: 4px;">🎙️ Radio Odyssée</div>
+    .player-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .logo img {
+      height: 55px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      display: block;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="message">🎉 Bienvenue sur l’espace Radio Odyssée</div>
+
+    <div class="player">
+      <div class="player-title">🎙️ Radio Odyssée</div>
       <audio controls style="width: 200px; border-radius: 6px;">
         <source src="https://stream.zeno.fm/vwgc5x9nreiuv" type="audio/mpeg">
         Votre navigateur ne supporte pas la lecture audio.
       </audio>
     </div>
 
-    <!-- Logo à droite -->
-    <div>
-      <img src="https://i.imgur.com/cQTcbK2.png" alt="Logo Radio Odyssée" style="height: 55px;">
+    <div class="logo">
+      <img src="https://i.imgur.com/cQTcbK2.png" alt="Logo Radio Odyssée">
     </div>
   </div>
 
-  <!-- ZONE DE CHAT -->
   <iframe
     src="https://chat.radioodyssee.com:8444/channel/radioodysseedirect"
-    width="100%"
-    height="600px"
-    style="border: none; display: block;">
+    title="Chat Radio Odyssée">
   </iframe>
-</div>
+</body>
+</html>
